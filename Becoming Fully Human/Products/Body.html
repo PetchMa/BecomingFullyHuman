@@ -1,0 +1,569 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Body</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	opacity: 0.5;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif; }
+.mono { font-family: Nitti, 'Microsoft YaHei', '微软雅黑', monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, Nitti, 'Microsoft YaHei', '微软雅黑', monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="d8adbc1d-1a8a-42aa-afe5-668822b57d96" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1564769662533-4f00a87b4056?ixlib=rb-1.2.1&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 56.36%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🏋</span></div><h1 class="page-title">Body</h1></header><div class="page-body"><p id="b72cf03c-9cc5-4c16-a569-5066d24dd34f" class="">This is what I think my physical self has shaped who I am.<strong> Below I&#x27;ve created a short video/podcast showcasing the sports that I do and how these philosophies engrained themselves into my perspective in life. </strong></p><p id="fa326967-d6dd-4ee1-a01f-9850a43c6617" class="">If you wish to see my rough notes + unfiltered ideas, checkout my idea process below. Its not well documented nor well structured. Perhaps this maybe interesting for you to see what I had refined. </p><figure id="9c0195ff-8b1e-4e6f-9525-626324da316e" class="link-to-page"><a href="Body/Body%20unfiltered%20ideas.html"><span class="icon">📃</span>Body [unfiltered ideas] </a></figure><h1 id="a2f875b0-5fba-473a-aee2-af06205c6f99" class="">Video Essay 🎬</h1><p id="9fc34bc9-db4a-477b-82dc-9f53fb8ef971" class="">This video mostly contains an internal conversation with visuals + images to illustrate my ideas. It is overly highly refined as to preserve some level of authenticity. 😉 Below the video is a short write up accompanying my video. Enjoy :)</p><figure id="bf212e32-70e2-4fee-9c01-225fd8d24667"><div class="source"><a href="https://www.youtube.com/embed/kXByOrRrO7c">https://www.youtube.com/embed/kXByOrRrO7c</a></div></figure><p id="777dc8e1-9e60-4f51-b8bb-8f7e8b0ae32f" class="">
+</p><h1 id="4169a4d3-6303-4c3b-8cc3-5a52587800b0" class="">Write Up 📝</h1><h3 id="7a457ef5-499c-440c-8f5d-662484c732b4" class="">Intro</h3><p id="6ae5f667-4509-49b9-b9ec-5f79524ad56f" class="">Personally, I&#x27;ve grown up weak and nimble my entire life. No I wasn&#x27;t encumbered by medical problems or illness, but I was always below average. While I was at the school yard, I&#x27;d always be the smallest, the slowest, the scrawniest kid in the grade. I never really cared about my physical self, not even when I was bullied and shoved to the ground by bigger kids in my grade. My perspective never really changed until I saw a limitation within physical myself. </p><p id="ed78e9c1-456f-41ee-a863-d37392512d95" class="">Over the summer I went on a trip to Mexico. On my first day there, things went south. Because of the exhausting flight coupled with the thick 35c + 80% humidity my body began deteriorating in the heat. I was sweating bullets, and to make it worse, I was stuck on a trail in the jungle with no water. Long story short, I collapsed, and was unable to move my legs as I sat under a palm tree trying to keep myself from passing out. You might be thinking, &quot;what about my parents??&quot; Well... they were fine. They chugged on with barely any water left, but because of my weak body, I was limited by my physical abilities. </p><p id="4dc80e73-8837-4f5b-8b97-b63084906d03" class="">Thankfully, fellow hikers spared me their water and candies [for electrolyte] and we decided to abandon that hike. As I sat on the car ride back, I just couldn&#x27;t get over the fact that I missed out on a potentially amazing experience just because of my physical limitations. I don&#x27;t want to live a life where my experiences are handicap by something that I can easily change. Thus when I got back I threw myself into improving and shaping my best physical self. </p><figure id="655b12dc-547f-4034-bd2a-efb538ca1cde" class="image"><a href="Body/IMG_7533.jpg"><img style="width:6000px" src="Body/IMG_7533.jpg"/></a><figcaption>After passing out on a trail, my parents felt bad and we bought the overly expensive Powerade. Never tasted better my entire dam life. </figcaption></figure><h3 id="a609328c-5a99-4be2-b110-550eef6ed0cd" class="">First reflection</h3><p id="81dfc719-6384-4db1-a8dc-041ab3aa1f6b" class="">I was determined to not let my body limit me. I was given such a healthy life I should take care of it. Thus I began doing exercises and workouts. After slowly building up my physical capabilities for the past 5 months, what stuck with me this time was the ability to overcome physical pain. </p><p id="7017a5ce-dcc8-4269-826a-3303a09bf65f" class="">Humans are such weird creatures in a sense that we willing endure these types of pain to better ourselves. This ability is a muscle that I have learned to stretch. This is different to doing a difficult math problem or writing tough computer code, where the this pain is almost uncontrollable. I realized that the saying &quot;no pain no gain&quot; is true in many aspects of my life. To do anything great within my existence, I need to be willing accepting of the pain that comes with my journey towards my goals. </p><p id="e80bec85-992e-470c-b084-367cc1f55417" class="">For example, I know I wish to pursue research in academic physics and mathematics. I am aware that there&#x27;s a tremendous amount of hardship that is required to get me there.  I&#x27;ve learned to be okay with that. A part of that acceptance is a translation of what I&#x27;ve learned from working out. There&#x27;s moments of intense &quot;pain&quot; (pain as in burning pain from exhaustion). This helped me develop a strong work ethic and stamina to do the things I love despite the great personal sacrifices I must make along the way. </p><h3 id="0136cef7-31ac-4478-88bc-d92f17ea21bb" class="">Second Reflection</h3><p id="9dec59a6-da73-42ae-8ff7-4ceb07e96637" class="">Following that, I&#x27;ve also recently began rock climbing and bouldering. Similar to working out, this is a sport that&#x27;s all about pushing personal limits. You are given a wall, a cliff or a mountain and told to ascend to the summit or the top. There is something metaphoric about it, a great deal with climbing is the joy that comes with tackling the hardest problems you can put your body through and to better yourself with each route you top. In rock climbing, there&#x27;s a &quot;let&#x27;s try it out&quot; mentality in rock climbing where I&#x27;ve learned to confidence to just &quot;give things a shot&quot;. This mentality has given me a very colorful life, a life with unique experiences, that&#x27;s made memories that I can look back too. For example, a few weekends ago, a few of my friends just got on a bus at 2:30 am to Montreal alone and tried a university coding competition for fun. We actually won an award... that was meant for the students at McGill. It wasn&#x27;t intentional, we came to this opportunity thinking &quot;what happens if ...&quot; that became a &quot;lets give it a shot&quot; which ended up being a really cool experience. </p><figure id="2d32d351-7ddb-4bb5-bd57-d050400c89b4" class="image"><a href="Body/image_(2).png"><img style="width:2048px" src="Body/image_(2).png"/></a><figcaption>This is was me coding with my friends alone in an empty lecture hall in McGill for the competition. We haven&#x27;t slept for the past 24-36 hours doing nothing but eating, drinking and coding. 💻☕ I personally wouldn&#x27;t have been able to survive this marathon of a journey without building my body to endure such an event. Oh and... it wasn&#x27;t meant for High school students...we just thought it&#x27;d be fun. Developing that &quot;give it a shot&quot; mentality 😉!</figcaption></figure><p id="a1208281-df5c-4798-8b2a-ca5575078597" class="">These are the philosophies I&#x27;ve learned while building my best physical self. The perspectives I&#x27;ve developed were directly influenced by what I&#x27;ve accomplished with my body. </p><p id="92fdbd74-8824-4428-9eb4-b2b3a7760b0f" class="">
+</p><p id="b3ab80ef-cbcc-4444-9922-1f61940eea3d" class="">
+</p><p id="5ce7bda1-e0f9-4725-a7d5-c9358f692cca" class="">
+</p></div></article></body></html>

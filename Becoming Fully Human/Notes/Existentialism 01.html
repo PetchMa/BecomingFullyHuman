@@ -1,0 +1,568 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Existentialism-01</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	opacity: 0.5;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif; }
+.mono { font-family: Nitti, 'Microsoft YaHei', '微软雅黑', monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, Nitti, 'Microsoft YaHei', '微软雅黑', monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="8d9f9583-463e-4810-a123-44d75edfb6c6" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/met_the_unicorn_in_captivity.jpg" style="object-position:center 30.000000000000004%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">💭</span></div><h1 class="page-title">Existentialism-01</h1></header><div class="page-body"><h3 id="8b5556c9-b544-4f2e-b824-01e64f7e3edf" class="">Why Are We Doing This</h3><p id="8a5f223e-7a99-4279-8a6b-42a00114a5a8" class="">We want a common language. Needed in subjective social setting. ⇒ Not anti religion </p><h3 id="e743fd0f-2642-400f-ad4a-a53484aa535b" class="">Definition</h3><p id="f15c8fca-186c-4fe5-a6b7-9dfbcef8152a" class="">Pursuit of authenticity. Philosophical movement which posits that we create meaning and essence of their lives. As opposed to it being created for them by deities of authorities or defined for them by philosophical or theological doctrines. </p><p id="aa32bcd1-8988-412e-b8e7-7104b11053fc" class="">Why do these absurd things happen? No one who sits beside a dying child believes in God. The universe is indifferent to the life around us. </p><p id="7fe1b211-55ee-462c-964a-b8309a31f0c5" class="">Assume that things are meaningless. ⇒ We don&#x27;t just accept things. </p><h3 id="7d6ab7ce-0c4f-4f50-9931-341465ab4926" class="">Story-1 ☀</h3><p id="c62fa5a5-6fb7-4d58-9b90-abb055de8556" class="">Thousands of years ago, we looked at the sun and we said its God. </p><ul id="04948cab-0564-46ce-963c-3bfd4849d67a" class="bulleted-list"><li>Dependable </li></ul><ul id="658fb2c0-c254-41d0-a359-a27b70a3bd8d" class="bulleted-list"><li>Giving God</li></ul><ul id="3d9bd121-1a34-4963-b8b6-6d3521822989" class="bulleted-list"><li>Easy to decipher </li></ul><p id="4ee630ae-96aa-45bd-93cc-ef0482057da1" class=""><strong>Then we evolved</strong> <strong>to </strong>⇒ Self, earth, and God. But soon that evolution turned to the Church and organized religion. God is given to us and things are &quot;thrust&quot; upon us. We are at the will of these things. We are indoctrinated by the church and the organization.</p><p id="f57f5d4a-759f-43d1-a09f-596cba2ed506" class=""><em>The God was made so that we can throw our responsibilities to the Gods above.</em></p><p id="d4d9a9dd-78e0-4c33-a306-115132c02313" class=""><strong>Postmodernism </strong>⇒ 1950&#x27;s 3 dudes in a bar talked Sartre, Camus and another dude that I can&#x27;t spell. Existentialism began. </p><p id="bbccc1d3-fd1c-43e8-8f8a-6314e922b5ae" class=""><strong>God-Eclipsing </strong>we began to control part of our lives more and more. God is dead. And this relates to humans losing purpose. Nietzsche relates to how we killed God based on how we live life aimlessly. </p><p id="066bf014-4a50-4d78-9846-40bbb3c5471a" class="">The transition to finding things in balance. </p><h3 id="f01e2611-781b-4384-afde-1eff4ef93e8b" class="">History</h3><p id="c1391829-397e-4fdf-bac6-b595ef583b9c" class="">We are forging for the a meaning and purpose to our living. </p><ul id="91103bb5-8878-49ab-b1f9-e508d18c911a" class="bulleted-list"><li>Pre-historic ⇒ unclear</li></ul><ul id="bcb89f4d-c2a3-4d65-aeed-af5b14a5c824" class="bulleted-list"><li>Tribal ⇒ nature</li></ul><ul id="7cac027d-3651-4e23-a54f-81ded2b4983c" class="bulleted-list"><li>Ancient ⇒ Spiteful natural Gods e.g storms winds etc</li></ul><ul id="3521cf5f-af7a-4118-a31b-0828e3876a53" class="bulleted-list"><li>Pre-modern ⇒ God</li></ul><ul id="7f655960-29cb-4b99-b96e-9bb9ab6ceddd" class="bulleted-list"><li>Modern ⇒ Skepticism </li></ul><ul id="8e57ef78-6bda-4e34-9854-866f15b2524c" class="bulleted-list"><li>Postmodern ⇒ confusions. </li></ul><h3 id="070bf42a-9915-41d9-b645-f222e839d1fb" class="">Meaning</h3><p id="98a9081a-4575-49ea-b29c-9c3d2832c712" class="">Do we want my existence to be watching netflix everyday? We are all trying to find it and forge it all. We have a God eclipsing self we are just living alone and isolated. Existentialists see that there are small breakdowns in society. </p><p id="aae99720-b45b-4bc1-b5d8-1d211bda43b3" class="">When disaster strikes people are searching for meaning and the God eclipsing self-diminishing. <em>&quot;The person you are most afraid to contradict is yourself&quot; - Taleb</em></p><ul id="95ae54fb-a610-4dc8-92b7-29c9b04cbc31" class="bulleted-list"><li>Perhaps I am scared of my reality. I am not entirely afraid of contradicting myself</li></ul><ul id="17560816-1833-4329-be11-a1a59de2abf9" class="bulleted-list"><li>I constantly search for contradictions because I personally want to search for Truths in my life</li></ul><h3 id="0d2aeb07-6bfd-4ca7-9ec4-76c15d25839f" class="">Man Search For Meaning</h3><p id="4b351aa4-017a-4067-b8f0-5f2b8bae6d77" class="">Most absurd conditions and brewing of Auschwitz. Holocaust and the endless amount of suffering. Megaile eloono life becomes meaningless when we understand that we all die. There is still optimism. Walking to the wire. People walk to the end of the edge and get shot. But that is their choice and have surmounted the overruling power from above. </p><p id="0dbcf920-3ee0-4a9a-9a3b-0457eee66df9" class="">Searching for the horrible and getting the experience. Brings in gratitude. Gratitude is the clarity and meaning. </p><p id="85f2ce12-80f9-4043-a9c9-16561ae762ed" class="">Sisyphus can still see clarity. God no longer is the overarching figure and we need to search for ourselves. Purpose can be found through the delta between the worst possible conceivable self and the best case scenario. </p><p id="0630beee-2cab-4262-bc46-b031efc7bfd7" class="">Despite all the tragedies we experience in life we can still find a lot of meaning. </p><p id="a68c92a9-f5bb-4d44-8435-b5e9bd12181a" class="">
+</p><h3 id="aa7f79a0-e5d4-466e-be9b-9b44e8e40bd2" class="">Poem Notes: The Path That Leads to Nowhere By Corinne Roosevelt Robinson. </h3><p id="05fbc280-b0c0-4c59-a601-88e0c8a31188" class="">The author might be suggesting that the life lived where there is no path can also be good. Despite the path having no end and no start, the journey matters more. The &quot;beauty of the dell&quot; or the &quot;marigolds amid the marshes&quot;. There is a lot of beauty in something that seems meaningless.</p><p id="fb9b7b40-6477-4354-aca8-660a8f104cde" class="">Furthermore, the writer seems to see the path that &quot;do lead to Somewhere&quot; is always rushing. It&#x27;s like the writer is telling us to enjoy life for the moment we have instead of chasing something that might never come true. Being on the path of nowhere may still lead to somewhere and for this person they&#x27;ve found their soul. </p><h3 id="8e0485c2-f06d-4b83-9d94-aaa81eace2f0" class="">Existential Bad Faith</h3><p id="50719fb0-d541-4535-a11b-6ddb1e01e05e" class="">Human reality is defined as a human&#x27;s reality is at stake because we refuse the freedom we have. Human beings, under pressure from social forces, adopt false values and disown their innate freedom, hence acting in-authentically. We forgo our true selves. </p><p id="8e6b3c29-c61f-4f7a-86e8-a8e33a87f855" class="">
+</p><p id="f7e0bf44-784d-4389-b827-46159ba5bac2" class=""> </p><p id="7c1d9a94-fd1d-41e0-b408-50e2df12e8fe" class="">
+</p></div></article></body></html>

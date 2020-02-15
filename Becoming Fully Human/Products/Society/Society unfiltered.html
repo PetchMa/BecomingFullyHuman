@@ -1,0 +1,568 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Society [unfiltered]</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	opacity: 0.5;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif; }
+.mono { font-family: Nitti, 'Microsoft YaHei', '微软雅黑', monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, Nitti, 'Microsoft YaHei', '微软雅黑', monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="70b40c02-76a9-41c8-a4f0-bb1d6cc8fc2c" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/gradients_2.png" style="object-position:center 19.999999999999996%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">📃</span></div><h1 class="page-title">Society [unfiltered]</h1></header><div class="page-body"><p id="3d132cdb-f286-42ff-af7d-a0317d0aa180" class="">This bit is where I reflect on my personal life a bit more. A bit more of a nose dive into the relationships I&#x27;ve built and ones I&#x27;ve lost. Below are a few snippets from my personal journal. It is a snapshot of a very vulnerable part of my life and thought this might be helpful in understanding where I came from. </p><p id="bd95565c-7146-406e-b357-d018d281e97d" class="">My apologies, this is horrendously unstructured. I also apologize if some of the things I say appear common knowledge but aren&#x27;t there&#x27;s a lo of personal stuff and this is the raw internal dialogue that I had. That&#x27;s just how I think perhaps. Nonetheless if you&#x27;re interested in reading about me a bit more, check it out below. Its a reflection on my past relationship after the new years [fairly recent</p><h1 id="37fa5002-7cfe-4f00-8c34-4502dbb9a329" class="">New Years Reflection On Relationships And Self</h1><p id="c5f3ef66-5248-47ef-921c-936b44026613" class="">Happy New Earth Orbit! The year has gone by fast, and in that time I&#x27;ve reached new lows and ascended to new heights. In this letter, I want to reflect on these events that made me who I am today. It&#x27;s not flashy with achievements, it&#x27;s not depressing either. 2019 has been one big lesson for me and perhaps you might learn more about what shaped me in the process.</p><h3 id="f01839df-ea74-4a36-a654-9e4c4e9c4fd7" class="">And Before It Began.</h3><p id="704202d0-ce98-4a0d-8e38-d7184ef168ef" class="">Hopping over to a new year, I&#x27;ve carried some heavy baggage that I probably should&#x27;ve left behind in 2018. Firstly, I was convinced that my life was not a life worth living. In some part of me, I&#x27;ve convinced myself that I had some sort of depression and thus choose to accept my &quot;illness&quot; as to how it is. No, I was never clinically examined for it, nor was this &quot;just a phase&quot; either. Despite being in the most driven environment ever (TKS), there&#x27;s a huge part of me that didn&#x27;t want to see 2019 after living through 2018. Yes, attempts have been made to end everything, but judging by how I&#x27;m writing this a year later, I&#x27;ve managed to walk out of my mental health issues. </p><p id="66695c31-1c5a-4d92-8a9d-79dcec9c6b0b" class="">At the start of TKS, apart from me felt like I was out of place. Fun fact, my ex-gf forced me to apply to TKS with her in the first place.... except when I got in and she didn&#x27;t... she managed to guilt-trip me whenever I tried to do anything I loved, convinced that &quot;I&#x27;ve been converted by the TKS cult&quot;. I entered the new year believing that my life is and will continue to be miserable and whenever I&#x27;ve tried making it better I was guilt-tripped into thinking that it was wrong.</p><h3 id="81335174-2d31-4975-be5e-b9c5f4a5be59" class="">It Began.</h3><p id="d72b965d-e2a0-412f-9372-e50687735d44" class="">2019 started off horrible. It was exam crunch time, I&#x27;ve stopped doing meaningful work on my projects and my parents are threatening to take me away from TKS. Prison is the only description of what it felt like. This tortuous lifestyle was pretty well reflected in my declining grades and will to live. I said fuck it and let me grind out January to my parent&#x27;s desires and maybe I&#x27;d get the rest of the year to do something great.</p><p id="38119502-138b-4e42-a2c9-9ef410c42276" class="">Except it only got worse. By February my relationship began falling apart. The girl I was dating at the time, blamed her unhappiness for my attempts to build myself a better life. She really hated TKS with every passion especially when I tried to do &#x27;extra&#x27; things. The rest of February went by painfully. I didn&#x27;t work much on things I loved, I felt isolated and out of touch with friends, family, myself, TKS and her.</p><p id="ddf092f7-1def-492c-93f5-79a4315df18c" class="">When March swung by things really began taking a hit, I really wanted to try and bring things together and mend the relationship. So being an INTP I tried to logically work through the situation, try and solve the problem with her. Bad Idea. You see what often happened was that she would be sad, and I would logically try and solve her problems. This hurt her even more and distanced each other. Obviously failing at my role as a partner, I tried to work on meaningful projects. Thankfully I was able to shift things up and take a trip to Yellowknife with my family. Perhaps one of the most memorable trips, despite suffering many emotional scars. </p><p id="073c31b7-2f4d-46be-9c86-4b79741ed5ec" class="">When I came back from my trip, I felt both lonely and inadequate. Being in TKS and seeing others race far beyond what I&#x27;ve &#x27;accomplished&#x27; really set me in a different kind of low. From speaking ops, to traveling the world, to building cool stuff, I just felt like I really didn&#x27;t belong in this place. I&#x27;m aware the mindset is toxic but that was how I felt. I had a terrible mindset where I validated my success on the opps I got from the program. I feel like a lot of innovates in my year also felt the same. It just got toxic. </p><p id="704fce29-a508-453b-bbca-4c10030ba814" class="">When April and May came by I was ready to just give up on the remnants of a once-happy relationship. I gave myself into my work and this is when I began building really cool projects in space tech, I&#x27;ve built radio telescopes and satellites. I&#x27;ve perhaps never felt that good in a while. And then she finally decided to break things off.</p><p id="80eae521-5b89-4f05-97d6-491222303e5b" class="">Part of me felt the need to cling on but another part of me told me I should leave. And so when I finally did part ways, I expected a dramatic downturn in my life, but ironically life began its uptick.</p><p id="a95b8013-30da-457a-9dc2-32de76d5aace" class="">I really realized that by surrounding myself with people who are continuously negative and sad my empathy drew me to reciprocate the same feeling despite it being harmful. Her sadness was infectious and by surrounding my life trying to mend that was a hopeless and scaring ordeal. </p><p id="022adc1f-4892-404d-b6c1-a439eab7fdb5" class="">When a 3-year relationship ends, you learn a lot. And so here were my learnings from that experience.</p><ul id="abcec265-dfe9-4d99-a1e2-bce343f313a8" class="bulleted-list"><li>You can&#x27;t make someone happy<ul id="ff774983-a8af-434f-8e60-811264928f85" class="bulleted-list"><li>Often times when your partner is sad or feeling down you instinctively try and help them. I realized that as much as I can comfort someone, I can&#x27;t make them happy for them. </li></ul><ul id="526031c8-40f3-410a-9b37-96ca50d11563" class="bulleted-list"><li>This made me realize that by actively believing that I can make someone happy, I&#x27;ve indirectly absorbed the same sadness they had faced. I felt like shit because she felt like shit. It just became a cycle.</li></ul><ul id="8ae8f979-bd0e-4efc-9bbe-545ee83dc394" class="bulleted-list"><li>It may be cruel to say but you aren&#x27;t responsible for how others feel, if you feel like you are, you&#x27;re going to be affected by their negativity. </li></ul></li></ul><ul id="a013f920-a791-40b0-9221-cb230896ecd9" class="bulleted-list"><li>Emotions &gt; Logic - when trying to comfort someone who is stuck in a problem<ul id="0afd448e-504a-4747-ac13-c2735f000a78" class="bulleted-list"><li>People just want someone to listen to them. Usually, at the height of a situation, the last thing they really want to hear is a condescending voice trying to solve their problem logically. They want comfort rather than someone who tries to take over their lives. Being an INTP&#x27;s I just didn&#x27;t understand this I suppose. </li></ul></li></ul><ul id="5d4f24fd-50a5-4718-973f-be4a75719e7d" class="bulleted-list"><li>You first must be able to love yourself before loving someone else<ul id="4a4ac97c-b873-4417-99fc-7864f08e8dc0" class="bulleted-list"><li>I noticed that both of us felt a dependency on each other despite both being sad and rather toxic to each other. The problem is we didn&#x27;t know how to love ourselves and be happy alone before trying to build any meaningful relationship. </li></ul><ul id="177d64ef-cab4-434c-b6a8-d28ba1462c56" class="bulleted-list"><li>This also means being okay with letting go.</li></ul></li></ul><ul id="afc3851c-d985-46b8-b3e1-0eb7d7e9a428" class="bulleted-list"><li>Be someone for them and encourage them.<ul id="145657ec-578e-443a-968b-e540dc4adca5" class="bulleted-list"><li>I tend to remain emotionless and my sense of humor is a lot darker and off-putting. I realized that I rarely make those around me happier because my jokes and overall demeanor isn&#x27;t necessarily nice. Just be a good person. </li></ul></li></ul><p id="e45044c7-6233-4e17-9cc9-a4fc492bdff3" class="">I suppose that these lessons were worth the months of suffering. I do see this failing relationship as primarily my fault. I know I was wrong, and I realized that if I perhaps treated those closest to me better, these painful lessons may have been avoided. Now looking back, it was probably best for me to learn this now rather than later. </p><p id="73907e4a-1db2-42cd-a6bf-8b33ed6a5bcd" class="">Around late June and May, I began to understand how to control my elements of suffering. Before there were two major pillars to my dissatisfaction and my misery, 1 - I always felt like a disappointment because I&#x27;m unable to those around me happy. 2- I felt like a disappointment to myself because I kept comparing my progress to those around me, especially in TKS. Fast forward into the summer, and I&#x27;ve pretty much eliminated all these sources of suffering and found real happiness in my existence. </p><p id="c000b720-1c19-490e-b3d8-1f37d6ebd393" class="">When July came and this is when my life took a step in a positive direction. Two things happened, I began spending more time with friends, and I also began doing things that brought me a sense of fulfillment. I was working at an internship for a startup called Betterbooks. I learned so much about the ins-and-outs of running a startup and meeting investors at pitches. I learned technical skills and social skills that I can&#x27;t get anywhere else.</p><p id="3c1fa427-ac90-45a9-9e28-98d943e0f201" class="">I also realized the value of spending time with people you care about. A big part of me before refused to spend time with my parents and friends until I realized how much I took their affection for granted. This was a problem in my previous relationship and now I began cherishing the time I have with those around me.</p><p id="0539a1c0-d39c-4e4a-859e-24bbcc29de3e" class="">During the summer I learned how to be happy within my existence even if things appeared hard and difficult. I&#x27;ve learned to stop comparing myself to others and validate my existence based on outside factors. I was on my own path and the only competitor was myself. I didn&#x27;t feel the need to seek validation from the people around me. For a moment in my life, I was in control of my happiness and this idea was really reinforced when I began activate. </p><h3 id="d9276e81-35ca-4cd0-a40d-93841f9f42d5" class="">The Up Tick.</h3><p id="582a87e4-b0d8-4790-8230-10e6fbbb37b3" class="">When I realized that I can live a super happy life simply based on my existence, I was able to just enjoy and focus on the things that mean the most to my life. In July and August, I really focused on building my friendships, relationships, and projects that bring me that feeling of joyful fulfillment I often hear people say in TKS. From here I&#x27;ve based my life on the things that make my existence meaningful.</p><p id="940d9f52-beb5-4541-8d35-fb9f8c7b1b60" class="">And so by the time September came around I felt like I&#x27;ve walked out of my previous life completely. A part of me knew that my so-called &quot;depression&quot; was not really true. I understood that a big part of life was impacted by the people I embodied. I simply absorbed the feeling of sadness and pain from the people I was with, especially my ex. This cycle of negativity ultimately drove me to a breaking point, after that point I was finally able to find the path I had to take. </p><p id="50f9bcf6-e365-470e-87cc-a63ae807a692" class="">From September to November a number of things happened. I got the chance to work on this amazing research project with Dr.Doyle I realized that the world has a lot more in store for me than I thought. I understood that an endless amount of possibilities awaits me for the rest of my life. </p><p id="bdbf85ed-8c39-4f89-ae9e-9dcf3e5d5867" class="">I&#x27;ve also felt more of a community feel within TKS. Perhaps what really did the trick for me was the community sessions (surprisingly fun and valuable) and the smaller activate community. When my second semester starts I want to really utilize the community I have before the year ends.</p><h3 id="b342ebcc-fba4-4dc6-b1f7-ee8c6338af38" class="">The world is waiting for me </h3><p id="9de6122f-f7b5-48fa-ab27-73838f5d4c97" class="">My previous half of the year was dreadful, the pain and the emotional investment sacrificed a lot only to learn one really big lesson. I have a lot of catching up to do but the lessons I&#x27;ve learned felt worth it. </p><p id="5ba722c4-9050-41c5-ab62-7ac613bed043" class="">In the end, my biggest achievement this year was finally finding a sense of long term happiness. I know this may not seem like a big deal compared to other people&#x27;s flashy annual letters, but this is something that I&#x27;ve struggled with for a long time, it wasn&#x27;t until recently that I&#x27;ve found joy in the life I&#x27;m living and found my belonging, especially in TKS. I have a long way to go but at the end of this year, I feel like I&#x27;m walking into 2020 with a new life. I really do feel like I can reach my full potential. I might be late than most other activates, but better late than never.   </p><p id="de3b01ad-f897-4620-8870-e5bb744a849f" class="">
+</p><p id="b822b422-5dbc-4d97-9964-ef099f2d6388" class="">
+</p><p id="398b293e-19b8-4ab5-8227-c6a2b4199390" class="">
+</p></div></article></body></html>
