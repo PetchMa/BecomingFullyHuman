@@ -1,0 +1,565 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>2020 March 3</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	opacity: 0.5;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif; }
+.mono { font-family: Nitti, 'Microsoft YaHei', '微软雅黑', monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, Nitti, 'Microsoft YaHei', '微软雅黑', monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="118922b1-bf6f-4e7b-b6ed-7fdac648a6c4" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1568137224279-f19f0f825447?ixlib=rb-1.2.1&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 10.550000000000004%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🎭</span></div><h1 class="page-title">2020 March 3</h1></header><div class="page-body"><h2 id="d837e4cf-4c2a-4e4b-ab38-ce8085fd7f04" class="">Pain and Suffering. ⇒ Buddhism and ideas I&#x27;ve learned from history. </h2><p id="fc960e5a-6e4e-4924-b795-71b8078fa2c7" class="">Aleksander Solzhenitsyn was a decorated Russain Captain at the height of the Second World War. He fought courageously for his country during a time of need.</p><p id="9208223c-d2a8-4881-b546-5e55e150e2ff" class="">Unfortunately for Aleksander, no matter how noble his actions may have been, in 1945 he was exposed to have written private letters about Stalin criticizing the Soviet regime. Because of that he was punished as a threat to the state. He was later sent to a Soviet work camp, also known as a gulag.</p><p id="d98efebb-ad1e-442b-991b-c5c49cc91a88" class="">Here Aleksander would spend the next 10 grueling years enslaved in arctic tundras of Siberia forced to work to his bones. What happened behind those iron curtains was perhaps the most brutal display of human evil possible.</p><p id="eb07405c-facd-4b7d-8716-d8a6b3304348" class="">The atrocities were so damn cruel that its very hard to think of any other point in history where there&#x27;s been so much human suffering inflicted on so many people all at once.</p><p id="4cc22626-e953-4ed1-a122-3758498f5283" class="">It was estimated that 30 million people entered these labour camps and were faced with the worst of the worst. To give some context, prisoners were forced to work 14 hour shifts surviving on 140g of bread a day. They were starved to a point there eating rats, and insects in the prison became a viable option. Some, even ate each other. They worked through the cold to the point where people dropped dead. For those that died, prisoners would raid the corpse for any piece of clothing they can get their hands on. The people were forced to work so hard that prisoners would burn their own arms and mutilate their own body parts to avoid the labour. Female prisoners, even young kids, would trade sexual favours with other men simply to avoid getting raped by the prison guards.</p><p id="d215f059-6b5c-41a0-bb2e-86b8354a58e8" class="">The white sea baltic canal was an 80mile long channel of water that was built on top of hundreds of thousands of dead corpse. What was worse was that most of these prisoners were effectively innocent. One account from Aleksander Solzhenitsyn noted that 3 children were sentenced to these Gulags for knocking down a poster of Stalin. A carpenter was sentenced to 10 years for hanging his jacket on a sculpture of Lennin at home.</p><p id="ca9b4a52-88d6-4be1-8fae-559c2bf8d39c" class="">This was the closest humans came to the manifestation of true evil. A majority of these stories stem from Aleksander Solzhenitsyn books which detailed the unspeakable truths behind the Soviet Gulag system in 3 volumes spanning 2,000 pages.</p><p id="f99712f1-ee30-4035-a1f1-3303952172a2" class="">Like anyone, after reading the account of the Soviet gulag I came face to face with the demon himself. Suffering. It surrounds us all.</p><p id="5304b740-a528-4233-aecb-2ac108f47fb0" class="">Although today we might not have gone through the tragedies that occured behind the Gulags over 40 years ago, there has been by no means an end to our suffering.</p><p id="c84f1d5e-cdc5-4974-9ee9-15ab0bb9cd9e" class="">Suffering is the price we pay for existence. To live is to suffer.</p><p id="6bc267c7-02e6-4846-832a-93ac2cc4626f" class="">Humans have been gifted the ability to see further than any animal on this planet, we because we can foresee a future. We can see what&#x27;s not yet there. However the price became apparent. By seeing the future we take on the suffering from the future and experience it in the present. We weren’t created to enjoy life, we were created to live life. That&#x27;s the difference.</p><p id="5eac33c0-757b-488f-b7ba-e7ed9ff3e4d8" class="">I’m sure I’m not the only one that thinks this.</p><p id="a833f189-86de-43f6-8bd0-3e3b6a2de5e7" class="">This idea of appears to be ubiquitous throughout history. In fact over 2000 years ago a wise man named Siddhartha realized something similar as well.</p><p id="922fdb98-26e2-4151-b614-4a40c48c7003" class="">The story began when Siddhartha was born into a family of elites. His father, the King, and the mother, the queen, gave the young Siddhartha everything he could’ve possibly wanted. However soon after his birth, his mother tragically died only a week after. Because of that, the King spoiled his son with all the riches he could give him. He lived a life without a pain in his life.</p><p id="a5266742-660c-4370-9c62-db768a774593" class="">However, one day Siddhartha went out onto the streets beyond his palace and witnessed what appears to be suffering. People were getting old, the old were getting sick and the sick were slowly dying. He soon realized that he too will age, he too will succumb to illness and he too will eventually die. After realizing the inevitable fate, he throws away his life of pleasure and seeks enlightenment on transcending beyond this cycle of suffering.</p><p id="c0ccb50f-297f-485a-95d1-47a7d51ab899" class="">The story goes on to describe how Siddhartha starved himself of everything imaginable and sat under a tree meditating. He would go on to defeat his desires and his wishes to accept the life of suffering and reach inner harmony. He eventually transcended beyond and escaped, what&#x27;s called the Wheel of Dharma. He eventually gave his teachings to fellow pupils and gave rise to what&#x27;s known as Buddhism.</p><p id="53817497-3952-4f5b-a1c2-4540270fd82d" class="">Buddhism is a religion that accepts the endless suffering of existence. Buddhism believes a person never actually dies. Whenever someone dies they are reincarnated again into another being. Buddhism believes that our suffering doesn’t only end at death but it exists in an infinite cycle known as the Wheel of Dharma.</p><p id="b184c344-25d4-4f85-b92c-8e3ca433e220" class="">Despite our impossibly gloomy fate, Siddhartha believes that we can transcend beyond this state to a place called Nirvana where we escape the endless suffering. The only way to do so is to follow what&#x27;s called the 8 fold path.</p><p id="588ba474-fdd7-4f2f-af1e-aaf12ecbfffe" class="">Here&#x27;s what it suggests.</p><h2 id="947e63d3-6f44-4b31-872a-314b69d83517" class="">THE NOBLE EIGHTFOLD PATH</h2><p id="dd1c7235-943e-42c9-a54d-e7850806148a" class="">Right understanding</p><p id="144bcdc4-201a-4f67-9b74-a5d536620f08" class="">Right thought</p><p id="c16d82d0-0ad5-49a5-bb8e-25c0f0581a06" class="">Right speech</p><p id="652aec5b-8c97-4702-80b8-1900dd51833f" class="">Right action</p><p id="56e66380-9f99-442f-8694-af629b3e496f" class="">Right livelihood</p><p id="b93a17e9-efc5-46a7-8645-c21febd56973" class="">Right effort</p><p id="1e1fec42-f7f7-47c7-812f-b716788cf55a" class="">Right mindfulness</p><p id="40855fbd-4b84-4ee8-b9c0-72de62459151" class="">Right concentration</p><p id="62d4e8a0-8c45-49d2-89a0-72d869cac0fe" class="">Siddhartha believed that everything we do is in relation to Karma. There can be good or bad Karma depending on the intention of our actions. This suggests if we practice the actions of the 8 fold path we too can reach towards Nirvana or a state of higher being.</p><p id="ca08462b-8f90-4a32-9e68-8de3bbd4738d" class="">But what does this actually mean?</p><p id="48a92dea-0596-4458-acea-f5fff81830d6" class=""><strong>Right Understanding - Understanding that the Four Noble Truths are noble and true.</strong></p><p id="8f64650a-5ac6-4976-8a69-27c308d47457" class=""><strong>Right Thought- practice Buddhist faith.</strong></p><p id="653d18ad-a7f6-4728-84e0-ba8e8f452217" class=""><strong>Right Speech- Avoid cursing and slander and lying</strong></p><p id="33c1830d-006c-4896-915e-a4ffecd5c59a" class=""><strong>Right conduct: refraining from any form of stealing or sexual impropriety.</strong></p><p id="244f1483-0c37-410d-9629-0a9c154c622e" class=""><strong>Right means of making a living: Killing animals or working at jobs that force you to violate others.</strong></p><p id="0a69637e-bae0-45f5-8af6-6a76d6b8808e" class=""><strong>Right mental attitude or effort: Avoiding negative thoughts and emotions</strong></p><p id="8c41e524-02c4-47df-b7ed-d0c27e4545f3" class=""><strong>Right mindfulness: Having a clear sense of one’s mental state</strong></p><p id="509dbb92-27f4-461d-a5a2-a8fb2bd164e6" class=""><strong>Right concentration: Using meditation to reach the highest level of enlightenment.</strong></p><p id="90c2764c-fdc6-43b0-b95b-b1fff8764913" class="">Siddhartha became aware that dissatisfaction is the normal state of being. In the end Siddhartha was able to transcend the to the state of Nirvana. And to this day, 2,500 years later, Siddhartha’s teachings still permute through the world today.</p><p id="cd77adba-d61b-48a2-832d-dc1252860fd5" class="">One of the reasons why his ideas have gathered such a huge following is because of its ubiquitous nature. It seeks to solve the problem of being. Every person can suffer and we all can relate to this. Pain can be felt throughout time, either in a labour camp in communist Russia, or even in the 21th century.</p><p id="aa263045-4b34-446a-881c-f9d17535ac87" class="">Even if we sit in a world where everything is built to resolve our horrendous suffering we can all perhaps take a page from his book. There is a path out of this suffering. It starts with you.</p></div></article></body></html>

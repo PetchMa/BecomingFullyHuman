@@ -1,0 +1,565 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>2020 March 6</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	opacity: 0.5;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif; }
+.mono { font-family: Nitti, 'Microsoft YaHei', '微软雅黑', monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, Nitti, 'Microsoft YaHei', '微软雅黑', monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="32a47cec-d9f8-4377-bcf2-fc7c7e3f6222" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1483135349295-9e3c48106ee6?ixlib=rb-1.2.1&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 65.10000000000001%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🗞</span></div><h1 class="page-title">2020 March 6</h1></header><div class="page-body"><p id="8f54692e-8ea2-468c-ad08-f8cb11fb629e" class="">I was interested in Taoism and decided to record some notes and concepts from the philosophies developed by Laozi </p><h2 id="56a49c35-3e5e-420b-95d6-bc5990ecdfc2" class="">Taoism</h2><p id="1d071287-1196-4307-8fc2-4a758a2badb6" class="">There once was a mysterious man that lived in ancient China. Born and raised in the state of Chu (currently called as Henan), this obscure figure worked in the great halls the powerful Zhou Dynasty in around 600BCE. He served in the court as a Shi. He was a scholar specialized in things like astrology and divination and were in charge of sacred books.</p><p id="e4ff06e1-30e4-420a-a982-39915052db85" class="">As some legends say, one day he met with one of the greatest thinkers in the history of ancient China. Confusious.</p><p id="10291e26-4012-4eb1-9186-c0867a89f58f" class="">Although some remain skeptical, it was described that Confusious was stunned by this man’s wisdom and knowledge. He was described by Confusious as a dragon that rises to the sky, riding on the winds and clouds.</p><p id="e6cae4f4-c9cc-46b3-8c8c-f1e9eac0997c" class="">As the Zhou dynasty slowly collapses, this mysterious man made a voyage west, to the outer stretches of the Empire until he was stopped at the border. There the guardian passage known as Yinxi stopped him and begged him to write his teachings and thoughts down before he leaves the empire for good. And so he did. He wrote a 2 part book with 5,000 characters containing his teachings and he passed them onto the guardian. After that he left for the mountains and was never seen again.</p><p id="88f030fa-a261-4732-abce-5e34f0651bb1" class="">His name was Laozi. And his 5,000 character books accounts for the foundation of one of the oldest religions in the world. Taoism.</p><p id="6db78534-a67b-440e-b7ea-3a3b6e8a905d" class="">His book, The Tao Te Ching , teaches his followers today how to<strong> live life</strong>. He teaches those who listen, how to live a life of balance and harmony. His school of thought is so popular that this book is the second most translated pieces of text next to the bible. So here’s what he’s got to say.</p><h2 id="1ecf42e6-7648-484b-9751-c00c6ea7a645" class=""><strong>The Taoist Life lessons</strong></h2><p id="d3e7e0de-f7ac-4072-9a54-df768356c974" class=""><strong>Look within and you will find everything you need</strong></p><p id="748bcbff-8903-4beb-b758-c69cceaf7239" class="">Knowing others is intelligence; Knowing yourself is true wisdom.</p><p id="50d83f78-2eec-4ffb-9dd5-77d8e4e6eed3" class="">Mastering others is strength; Mastering yourself is true power.</p><p id="7b90ad34-3259-4bef-a3a8-7d1d76348097" class="">Our actions are based on a duality of Yin and Yang. The Yang represents our external actions such as making money or owning a house or working. These actions are outward movements. We also need a complimentary action to form balance (the Yin), and its responsible for cultivating our inner experiences. We need to slow down and reflect either through meditating or simply relaxing. Enjoy “being” without having to do anything.</p><p id="714caf51-7984-4a74-b128-6a919f4e947f" class="">Laozi believed that we cannot simply spend our days outwardly expressing ourselves but instead balance these external actions with self reflection and contemplation.</p><p id="103c7f82-2d71-4e42-9059-bad8b857c975" class="">By practicing our inner contemplation, it allows us to do to reach a deeper reservoir of energy and build tolerance to the challenges of life.</p><h2 id="af6c25eb-bc46-4226-870f-a0df9ad96bc9" class=""><strong>By letting go you become free</strong></h2><p id="7021a40a-9d76-4575-a542-1e222619bab5" class="">The world is beyond the winning. We are bounded by the cosmological forces at play. In the How might we enlighten ourselves? We must examine our attachments that we cling to. They maybe an attachment to security, attachment to recognition and attachment to control. By relying on these substances, our desires become toxic. These desires constrict us from accepting others people or values into our lives. By letting things go you open up the possibility to things that make you happier in life.</p><h2 id="6f3f0d54-4622-4150-a973-1316c34ad4b0" class=""><strong>Don’t label yourself.</strong></h2><p id="32c13914-d4da-4e48-8b1a-c3691f865bba" class="">Definition limits your personal growth.</p><p id="c23c9494-9aa2-47da-9029-92a41634906a" class="">Perhaps you might call yourself an amazing artist or an amazing husband or perhaps you think your an awesome cook, whatever you may see yourself maybe, you limit your possibility for growth. We put ourselves in boxes to define who we are. By doing so we dictate our lives and how we grow. The issue here is, our labels are formulated based on subjectivity. Our labels are simply fragments of who we think we are but not who we could be and thus they paint a very faulty image of ourselves.</p><p id="c9d5dac4-1fb5-4276-9559-a3f5a31aa69d" class="">By stripping away labels, you wouldn’t feel chained down by anything and allow yourself to grow. Similar to how a baby is discovering what food they may like. They don&#x27;t know what they like without trying. Similarly you should put yourself in a similar position and actively seek to discover what defines you. You don’t know what you don’t know.</p><h2 id="8018b9b6-038e-446a-bef5-6bda32dde7a3" class=""><strong>Unconditional Kindness</strong></h2><p id="d594cbb9-21fe-4e56-8b7d-e485c10fa7d4" class="">Imagine water. Water flows through everything laying low to the ground. It nurtures all the plants and animals around it and never stops and waits for praise. In fact water always travels to the lowest point back down to the ground.</p><p id="3817e18a-7cba-4268-b5d3-b3737cb014df" class="">Similarly, Lao Zi also believed that humans compassion should be like water. We should humbly help those around us and not expect anything back. Why? Because by practising compassion we gain great insight into the nature of suffering but more importantly we understand ourselves. By putting someone else first it helps deepen our connection with the world at large.</p><h2 id="59671b09-fa70-44d1-9e99-fb055c9f13fb" class=""><strong>Wisdom and strength come by remaining humble</strong></h2><p id="30167db4-d9c6-4ce8-b3a4-ace2b79feb07" class="">The wisest man is one who knows what he does not know.</p><p id="c86cba35-c5ca-48f5-af7e-a0b4266c1dff" class="">LaoZi tells a story about a pair of identical twins. In the story each twin individually grew up away from each other, one became rich, wealthy and well liked amongst the tribe. The other, well… not so much. The more successful twin treats the other with arrogance and blames his misfortune on the lack of talent and skill. However, what the successful twin didn’t see was that he possessed more luck and not necessarily more worth. While his brother possessed more worth than luck. One should be humble about yourself because humility is the only cure for the disease called pride. Sadness and anger are companions of pride whereas calm and joy are companions of humility.</p><h2 id="06f7180c-999d-4e97-8306-8a9fe46d1191" class=""><strong>Change is inevitable. Embrace it.</strong></h2><p id="c38fc55f-b8af-49fa-b7a1-69bf27928cc3" class="">New beginnings are disguised as painful endings. Change is forever necessary. We are scared of the unknown and because of that we long for things to stay the same. We are afraid that change may not lead to something better and thus we shy away from it. Every change is meaningful and it brings new beginnings and new direction and perhaps a new life.</p><h2 id="923a7348-70ec-4022-ba34-e155adce837e" class=""><strong>Learn to follow first before you learn to lead.</strong></h2><p id="c327628d-a9fa-41b1-9075-acccccd050ac" class="">Take a look at rivers and seas. Seas are obviously more powerful than rivers, they are deeper and encompass a far larger territory. However if it isn’t for the rivers, there will be no sea. This brings up the idea of leadership.</p><p id="fcddfa7e-10f7-40f9-b910-f935e8a727e0" class="">the leader must first be led themselves. The leader must know how to follow before they can lead. They need to be able to receive from the people they lead. By doing so they can draw out the best in people. These leaders understand and empathize for the people they are representing.</p><h2 id="e8f13536-ad41-4986-b37e-b9e98d5be297" class=""><strong>Wu Wei</strong></h2><p id="1f18a09d-6acf-49dc-b517-7bff5a543196" class="">Finally, the philosophy of flow is perhaps the most important teaching from Laozi. He believed that there exists a force beyond the human senses and thus we must go with the flow of the universe. This idea is similar to the western philosophy of stoicism. This idea pertains to the belief that non-action is better than going against the force of the flow. We shouldn’t feel the need to control the world around us because its not within our control. By placing the burden of responsibility we react to ever small conflict within our lives. Thus the teaching of Wu Wei becomes immensely powerful.</p><p id="a068a6a1-940a-47a0-af0b-a2033e508631" class="">Today, some historians believe that he never even exists. His past is shrouded in mystery with overlying contradictory facts about his life. In 2019, his teachings has amassed a fellowship of minimum of 12 million students who preach his thoughts and ideas.</p><p id="158cad8f-fe11-4d98-999a-7e2dbef0e7e9" class="">Laozi’s ideas, despite being at the end of his life during the time of his famous book, survived over 2,000 years of history. His work is influential and has helped many understand the life that they live. Perhaps you will too.</p></div></article></body></html>
