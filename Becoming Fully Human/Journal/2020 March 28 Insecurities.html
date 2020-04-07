@@ -1,0 +1,625 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>2020 March 28 - Insecurities </title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="ae627b53-c014-4fd3-95cd-6f620106eb5a" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/nasa_multi-axis_gimble_rig.jpg" style="object-position:center 80%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🏋</span></div><h1 class="page-title">2020 March 28 - Insecurities </h1></header><div class="page-body"><p id="26728eb4-171a-4efa-aa4f-489eb328407e" class="">I just felt like researching and understanding my personal insecurities and how it relates to my personality type. </p><h1 id="303ed010-702e-4017-acaf-bdace9a764f7" class="">Insecurities</h1><p id="c42c8e50-899f-45e6-9c7e-1af51e591fa0" class="">There are a few main reasons. </p><ul id="9576eb5b-2f44-41bb-aa26-b97e255e2ab0" class="bulleted-list"><li>We cannot actually provide ourselves if worse comes to worst<ul id="24f197f6-d4a0-4616-9bd4-fd3426e75521" class="bulleted-list"><li>We don&#x27;t trust ourselves to fail. Because we might not be able to live when worst comes to worst. We can&#x27;t survive without current systems and thus if we fail we might get kicked out of the system and we might just die lol. </li></ul></li></ul><ul id="9d3eeba2-777e-4c51-8b43-8d6bc1eed0c6" class="bulleted-list"><li>We do not compare with ourselves locally we compare ourselves globally <ul id="28be8012-265f-4c4d-8513-525fa4035987" class="bulleted-list"><li>Before we had farmers that might grow crops and experience anxiety when they are competition locally. Now we are competition globally. You are constantly seeing the best of the best and thus feel shit about yourself.</li></ul></li></ul><p id="82237699-314f-49bd-84eb-80baeb91798d" class="">I tend to identify my self worth base on my intellectual ability and thus if I&#x27;m lacking in that area that would be detrimental </p><p id="fe5c723b-67bc-48b8-8b5a-8e5c0b96396c" class="">One thing that our system do, we punish failures too much. We have systems in place to make sure things work the best we can make them.</p><p id="7b022da8-186d-459b-9976-fc8d01a30afa" class=""><mark class="highlight-orange"><strong>The entire world motivates people through your insecurities. The entire works on trying to make you anxious and pushes development. Example you buy makeup products because you realize without that product you&#x27;re less happy. </strong></mark></p><p id="2a327827-6219-48a1-b337-74bb90475508" class="">Insecurities help us spiral. We are in a feedback loop of where nothing really matters. Hopelessness we are not biologically inclined to make logical conclusions on how to deal with these hopelessness. </p><h3 id="7f34bd32-b75e-41a8-9eba-2da14bf6b78d" class="">Personality Types</h3><p id="e1bdb9ea-7277-4781-97db-09d4d0aa6ec1" class="">The 16 personality types ⇒ 16 break downs into structures. We cannot physical measure but a theory.</p><p id="8cf7477c-4196-4b4f-b3b6-b5ed5194372b" class="">We measure: <mark class="highlight-purple"><strong>OCEAN </strong></mark>⇒ Openness ⇒ open to ideas, Conscientiousness ⇒ getting to work, Extroversion, Neuroticism ⇒ pain</p><p id="f07944be-4982-4461-a5cd-5902dcf71435" class="">MBTI helps you get the OCEAN, MBTI helps get you closer to OCEAN. This uses depth psychology. Human cognition ⇒ see and take input and we make judgment. We judge by <mark class="highlight-orange"><strong>thinking </strong></mark>and <mark class="highlight-teal"><strong>feeling. </strong></mark>We judge by rational or value judgement. It feels bad or good. Versus this is good or bad. We take in stuff  by <strong><mark class="highlight-purple">sensing </mark></strong>and by <strong><mark class="highlight-pink">intuition</mark></strong>. Leap into the future. Perceiving the future. This is just advance pattern recognition.</p><p id="cd35d499-946d-403f-ad20-782cdde826e3" class="">
+</p><p id="8ab78787-e34f-4366-8577-ad407d6aea79" class="">Introverted thinking ⇒ make sense to <strong>me. </strong>Reward is when new info can fit together. </p><p id="c7e13b84-0e3b-4eb5-ab6a-dae418f0915e" class="">Extroverted thinking ⇒ real world, the steps I need to make to achieve that metric. Goal is reached. Need to execute.  </p><p id="a72dcce7-d29a-4b9d-b7c7-a1cb21ade1c0" class="">Introverted Feeling ⇒ Emotion is sourced within. Person source of truth. Defines morals. </p><p id="e4147bed-deeb-4b18-a2f5-cc9f46650524" class="">Extroverted Feeling ⇒ Do things to make other people feel good. </p><p id="09116f8d-b35c-41c2-8395-6647675d549e" class="">Introverted Sensing ⇒ Personal sensation of reality. Basis for your own history and your experiential self. Make more decisions after the moment. </p><p id="90b0d1a8-bec6-483d-a211-dcec43c23d36" class="">Extroverted Sensing ⇒ </p><p id="f912a5aa-fe91-4df3-a459-b352bbd6800d" class="">Introverted Intuition ⇒ Adv pattern rec, go into other perspectives into a future path. </p><p id="5208fecc-cd1b-4f90-b95e-9ed6db54b4f5" class="">Extroverted Intuition ⇒ Rapid fire creative thinking, ideation. Mess with the world and see what happens. </p><p id="227fe66c-d914-4f57-96df-ebe6706b6ee6" class="">We have all 8but we only really express the four. They work with opposites. Two pairs work together. </p><p id="46695688-caf3-4935-a107-64482f4045bd" class="">We can pair together dichotomies and see what happens in the world.</p><h3 id="c8cd5431-c187-4699-83a0-807d4fbc4677" class="">CS Joseph ⇒ depth psychology.</h3><p id="4b4989a1-28c0-40d1-9f43-33d100388b7a" class="">
+</p><p id="8cfa5fe9-76f8-4942-8f74-d60f5e747b6c" class="">Hero ⇒ introverted function where you like to be the most. </p><p id="7ca4857b-627c-4c39-bcd3-2924c592342c" class="">Parent ⇒ skills is the opposite of introverted function. Build your mature personality. Balance. Responsible </p><p id="69494c62-0d79-4f1a-94d1-8411e4b2c35f" class="">Child ⇒ Opposite and simplistic </p><p id="c11ebd1e-9a5a-439a-843f-7b0dd4847255" class="">Inferior ⇒ Opposite of hero function we are so  bad at it. It is our insecurity.</p><p id="f74e8654-ba00-4a85-8744-bf7ae5f92ca3" class=""><strong>NOTE</strong>: We often judge people on not their personalities strengths. </p><p id="18d98ecb-df06-4991-b4cc-36f0ca9a0873" class="">Nemesis ⇒  Something your unconsciously afraid about</p><p id="ea0f2f06-0d00-4471-8be7-cde0452cdeac" class="">Critic ⇒ Critical parent of yourself</p><p id="f592a1ae-4c46-42ec-90cc-4e2d127bfdce" class="">Trickster ⇒ Unaware of, blind spots. ⇒ physical sensing, we often don&#x27;t care of reality </p><p id="3dc76c8f-47ee-467d-ac74-98c34500ebd6" class="">Demon ⇒ We hate using it. </p><p id="b9d0f0ef-f085-44c9-a04d-e97c77c0d50e" class="">
+</p><p id="82df1d0e-b818-460f-b64c-646e9e5382e6" class=""><mark class="highlight-pink"><strong>General rule</strong></mark> ⇒ nemesis function, and inferior and child function.  Fixation for different personality types. When we fail a compulsion. </p><p id="7c308a2c-3537-4918-930c-e10868d03636" class="">We have a compulsion, we have a conversation on allowing certain things to happen.</p><p id="73639d2b-41b5-4682-aec6-2572cb3e9a46" class=""><mark class="highlight-red">ME: ⇒ Introverted Thinking, Extroverted Intuition, Introverted sensing, Extroverted feeling. </mark></p><p id="82b74bdc-0a05-4da1-9e0e-412d8a815e25" class=""><strong>Introverted Judging</strong> ⇒ we want to be right... we judge ourselves we are right. Conveying right is why we are struggle. We are worried of people thinking we are not smart enough. We want to be right.  </p><p id="f4266ea9-fd8e-462a-b744-86029995bd16" class="">Some people want to mange things. What we fixated on, if we can&#x27;t achieve we fall on other functions. </p><p id="e26f08e5-887a-4e25-b57d-f7af12226ee3" class="">We have a gradual tendency to stay within your comfort zone. Find someone and a mentor that empathizes with your situation. Similar functions. </p><p id="7e9ffa8d-1554-42eb-93ed-1644cf804cc5" class="">You need ambition to take these things we go and achieve these things. INTP we want be your own best. We can get a driving mech is to becoming best version of ourselves. </p><p id="59a85393-fd5b-4af4-92dc-0fe791d4f90c" class="">Get an ENTP. We want to build the parent function. INTP ⇒ we want to build opposite. Hero and child function. We want to hangout with someone who is the ENTP. Learn each other&#x27;s </p><p id="44040dee-0172-4377-a35c-b04c224e501d" class="">ENFP ⇒ problem solvers, get centered. </p><p id="f9dcf0cd-848d-4a48-a3fb-4bb68e06c2bc" class="">Build a foundation within inferior function. </p><p id="8776f147-ab0d-4ac7-aaa9-ca7bff430ebc" class="">Framework ⇒ building yourself. </p><h2 id="57352a2c-2511-445e-b317-2d5983066337" class="">General template on how to improve yourself. </h2><p id="152a292c-446f-48e8-90ac-76d8cb98bd2f" class="">INTPS ⇒ </p><p id="54f1c8f4-7c81-4111-93da-92e3c68533d9" class="">Hero  = Introverted think ⇒ We want to be right. </p><p id="0ab346ab-ddfd-41ba-9b90-3c9de53ef5e1" class="">Nemesis = We are insecure with being right. </p><p id="af850ae6-b5f7-4146-8e35-cd7a13ae88d8" class="">Highest leverage is to work on parent function. Talent in it. Creative, and we can think about stuff in creative modes. <strong>We train and experience other shit. </strong>This is what we need to do. We know so many things but we aren&#x27;t actually building something. </p><p id="283309a4-c182-415e-817e-a9ab3747bf17" class="">How balanced are you defines maturity and it takes effort to step into different personalities. </p><p id="2b4370a6-6e95-44e8-8c26-f0306cd06497" class="">I am not good at getting other people INTP ⇒ be really silly. Child like silly, when we are extroverting. Being extroverted in a way you have talent in. </p><p id="82d31b48-d49a-4694-9bdc-2820431eb1fd" class="">Next thing ⇒ use hero function in a healthy way. Unheatlhy is tied to anxieties. We are obsessed in being right. Best way is to be an information gatherer. Becoming a data gatherer, keep mining to learn something interesting. </p><p id="7ab8210e-cff6-45b1-9051-668c4e2c3ea6" class="">What can I learn from any situation. Be willing to change your opinion. Hold loosely to conclusion. &quot;Given all the info, this seems is what it seems like ... Im open to data that says otherwise. I want to come with a better understanding of what the world is. This is what Im thinking given the info I have right now. &quot;</p><p id="2f5a8b72-e942-4f93-ac05-408c59681651" class="">See what you can learn from a situation. ⇒ Show them why they are dumb is bad, just ask question to prove something wrong. </p><p id="506c7044-26d8-4b63-84ef-86a7f6462871" class="">We self rationalize everything and we loop. Hero and child. Unhealthy function. </p><p id="bbb67255-a2b8-41ef-a3ca-c2195ba522f9" class="">cognitive function stack. </p><p id="79326fa9-d709-4f21-ab2b-70c497f7e4ac" class="">Try traveling alone. INTP → Build a loop with the child, habits for example, force yourself to do something different every day. </p><p id="b9956276-aad3-4ffb-b71e-0bdf19bd52a7" class="">Habit insecurity, force yourself. Way you feel about productive things may suck but they disappear and they can become a habit. </p></div></article></body></html>
